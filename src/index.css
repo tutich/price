@@ -1,13 +1,29 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&family=Karla:ital@1&family=Kumbh+Sans&family=Manrope:wght@600&family=Overpass&family=Poppins:wght@500&family=Raleway&family=Roboto+Serif:ital,opsz,wght@0,8..144,300;1,8..144,200;1,8..144,300&family=Space+Grotesk:wght@500&family=Space+Mono:wght@400;700&display=swap');
+
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+ font-family: "Manrope";
+ background-image: url("../src/images/bg-pattern.svg");
+ background-repeat: no-repeat;
+}
+.pricing {
+  /* background-color: hsl(0, 0%, 100%); */
+  border-radius: 0 0 0 3rem;
+}
+.header {
+  /* background-color: hsl(224, 65%, 95%); */
+  background-image: url("../src/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+}
+.slide {
+  /* background-color: hsl(224, 65%, 95%); */
+}
+.app {
+  text-align: center;
+  margin: 3rem;
 }
