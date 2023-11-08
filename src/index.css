@@ -10,6 +10,7 @@ body {
  font-family: "Manrope";
  background-image: url("../src/images/bg-pattern.svg");
  background-repeat: no-repeat;
+ 
 }
 .pricing {
   /* background-color: hsl(0, 0%, 100%); */
@@ -19,6 +20,7 @@ body {
   /* background-color: hsl(224, 65%, 95%); */
   background-image: url("../src/images/pattern-circles.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 .slide {
   /* background-color: hsl(224, 65%, 95%); */
