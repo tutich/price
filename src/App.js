@@ -25,7 +25,7 @@ function App() {
           <p>Unlimited Websites</p>
           <p>100% data ownership</p>
           <p>Email reports</p>
-          <button>Start my trial</button>
+          <div className="btn"><button>Start my trial</button></div>
         </div>
       </div>
       
