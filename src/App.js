@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import circlePat from '../src/images/pattern-circles.svg';
 
 function App() {
   return (
     <div className="app">
+      <div>
+      <img src='circlePat' alt='circle'/>
+      </div>
      <div className="header">
        <h2>Simple, traffic-based pricing</h2>
         <p>Sign-up for our 30 day trial. No credit card required.</p>
@@ -25,7 +29,10 @@ function App() {
           <p>Unlimited Websites</p>
           <p>100% data ownership</p>
           <p>Email reports</p>
-          <div className="btn"><button>Start my trial</button></div>
+          <div className='but'>
+            <button className="btn">Start my trial</button>
+          </div>
+          
         </div>
       </div>
       
