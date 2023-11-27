@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import circlePat from '../src/images/pattern-circles.svg';
+import sliderIcon from '../src/images/icon-slider.svg';
 
 function App() {
   return (
@@ -13,12 +13,15 @@ function App() {
         <div className="container">
           <div class="slide">
             <p>100K PAGEVIEWS</p>
-            <input className='slider' type="range"/>
-            <img
-              src="./images/icon-slider.svg"
-              alt=""
-              class="slider-icon"
-              draggable="true"/> 
+            <div class="icon">
+              <input className='slider' type="range"/>
+              <img
+                src={sliderIcon}
+                alt=""
+                class="slider-icon"
+                draggable="true"
+              />
+            </div>
               
             <span>$16.00<p>/ month</p></span>
           </div>
