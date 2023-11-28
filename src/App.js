@@ -5,6 +5,9 @@ import sliderIcon from '../src/images/icon-slider.svg';
 function App() {
   return (
     <div className="app">
+      <div class="bg-pattern">
+      <img src="./images/bg-pattern.svg" alt="" class="bg-pattern-img" />
+    </div>
      <div className="wrapper">
        <div className="header">
          <h2>Simple, traffic-based pricing</h2>
@@ -26,10 +29,14 @@ function App() {
             <span>$16.00<p>/ month</p></span>
           </div>
           <div className="pricing">
-            <p>Monthly Billing</p>
-            <label class="switch">
-              <input type="checkbox"/>
-              <span class="slider round"></span>
+            {/* <p>Monthly Billing</p> */}
+            <label class="toggle-container">
+            <span class="toggle-label">Monthly Billing</span>
+              <input type="checkbox" className='toggle-checkbox'/>
+              <div className='toggle-slider'>
+                <div class="toggle-thumb"></div>
+              </div>
+          
             </label>
             <p>Yearly Billing  <span>25% discount</span></p>
             <hr/>
