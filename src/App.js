@@ -5,9 +5,6 @@ import sliderIcon from '../src/images/icon-slider.svg';
 function App() {
   return (
     <div className="app">
-      <div class="bg-pattern">
-      <img src="./images/bg-pattern.svg" alt="" class="bg-pattern-img" />
-    </div>
      <div className="wrapper">
        <div className="header">
          <h2>Simple, traffic-based pricing</h2>

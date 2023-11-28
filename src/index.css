@@ -12,33 +12,28 @@
 
 body {
  font-family: "Manrope";
- background-color: hsl(230, 100%, 99%);
- margin:0 auto;
+ background-image: url("../src/images/bg-pattern.svg");
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ margin:0 ;
+ padding: 0;
  font-size: 30px;
  text-align: center;
- height: 100vh;
+ height: ;
  justify-content: center;
  margin: 0 auto;
      
 }
-.bg-pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -10;
-}
-
-.bg-pattern-img {
-  height: 300px;
-}
 
 .header {
   
-  padding: 7em;
+  
 }
 .wrapper {
   display: grid;
   place-items: center;
+  
 }
 .pricing {
   /* background-color: hsl(0, 0%, 100%); */
@@ -71,7 +66,7 @@ body {
 
 .slider-icon {
   position: absolute;
-  top: 15.65em;
+  top: 5.6em;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
@@ -86,9 +81,9 @@ input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
-  background: hsl(174, 77%, 80%);
+  background: hsl(224, 65%, 95%);
   border-radius: 30px;
-  border: 2px solid hsl(174, 77%, 80%);
+  border: 2px solid hsl(224, 65%, 95%);
 }
 input[type="range"]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px hsl(174, 86%, 45%), 0px 0px 1px hsl(174, 86%, 45%);
