@@ -1,8 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
 import sliderIcon from '../src/images/icon-slider.svg';
 
 function App() {
+
+
+    const [pageViews, setPageViews] = useState(50000); // Initial page views value
+  
+    const handleSliderChange = (value) => {
+      setPageViews(value);
+    };
+  
+    const calculatePrice = () => {
+      let price;
+  
+      if (pageViews <= 10000) {
+        price = 8;
+      } else if (pageViews <= 50000) {
+        price = 12;
+      } else if (pageViews <= 100000) {
+        price = 16;
+      } else if (pageViews <= 500000) {
+        price = 24;
+      } else {
+        price = 36;
+      }
+  
+      return price;
+    };
+  
   return (
     <div className="app">
      <div className="wrapper">
@@ -14,7 +41,13 @@ function App() {
           <div class="slide">
             <p>100K PAGEVIEWS</p>
             <div class="icon">
-              <input className='slider' type="range"/>
+              <input className='slider' type="range"
+               min={10000}
+               max={1000000}
+               step={10000}
+               value={pageViews}
+               onChange={handleSliderChange}
+              />
               <img
                 src={sliderIcon}
                 alt=""
