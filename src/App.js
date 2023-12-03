@@ -3,6 +3,34 @@ import './App.css';
 import {useState} from "react";
 import sliderIcon from '../src/images/icon-slider.svg';
 
+const PricingDeets = {
+  1: {
+    pageviews: "10K",
+    monthly: 8,
+    yearly: 72,
+  },
+  2: {
+    pageviews: "50k",
+    monthly: 12,
+    yearly: 108,
+  },
+  3: {
+    pageviews: "100K",
+    monthly: 16,
+    yearly: 144,
+  },
+  4: {
+    pageviews: "500k",
+    monthly: 24,
+    yearly: 216,
+  },
+  5: {
+    pageviews: "1M",
+    monthly: 36,
+    yearly: 324,
+  },
+};
+
 function App() {
 
 
@@ -39,7 +67,7 @@ function App() {
         </div>
         <div className="container">
           <div class="slide">
-            <p>100K PAGEVIEWS</p>
+            <h2> &{pageViews}k PAGEVIEWS</h2>
             <div class="icon">
               <input className='slider' type="range"
                min={10000}
@@ -56,7 +84,7 @@ function App() {
               />
             </div>
               
-            <span>$16.00<p>/ month</p></span>
+            <span>${calculatePrice()}<p>/ month</p></span>
           </div>
           <div className="pricing">
             {/* <p>Monthly Billing</p> */}
