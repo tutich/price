@@ -46,7 +46,13 @@ function App() {
     return `${(pageviews - 1) * 20}%`;
   }
   
-  const handleConfirmClick = () => {
+  function formatCurrency(amt) {
+    return amt.toLocaleString(undefined, {
+      currency: "USD",
+      style: "currency",
+    });
+  }
+  const handleSliderChange = (e) => {
     
   };
 
@@ -59,15 +65,25 @@ function App() {
         </div>
         <div className="container">
           <div class="slide">
-            <h2> &{pageViews}k PAGEVIEWS</h2>
-            <div class="icon">
+            <h2> {PricingDeets[pageviews].pageviews} pageviews</h2>
+            <div class="icon" style={{
+                  // transform: `translateX(${pageviews == 5 ? "-100%" : "0"})`,
+                }}>
               <input className='slider' type="range"
-               min={}
-               max={}
-               step={}
-               value={pageViews}
-               onChange={handleSliderChange}
+               min={1}
+               max={5}
+               step={1}
+               value={pageviews}
+               onInput={(e) => {
+                setPageviews(e.target.value);
+                }}
               />
+              <div
+              className="fake-range"
+              style={{
+                "--width": updateRangePosition(pageviews),
+              }}
+             ></div>
               <img
                 src={sliderIcon}
                 alt=""
@@ -76,13 +92,20 @@ function App() {
               />
             </div>
               
-            <span>${calculatePrice()}<p>/ month</p></span>
+            <span className='amt'> {formatCurrency(
+                PricingDeets[pageviews][isMonthly ? "monthly" : "yearly"]
+              )}</span>/
+             {isMonthly ? "month" : "year"}
           </div>
           <div className="pricing">
             {/* <p>Monthly Billing</p> */}
             <label class="toggle-container">
             <span class="toggle-label">Monthly Billing</span>
-              <input type="checkbox" className='toggle-checkbox'/>
+              <input type="checkbox" className='toggle-checkbox'
+                 name="billingType"
+                 id="billingType"
+                 onChange={(e) => setIsMonthly(!isMonthly)}
+              />
               <div className='toggle-slider'>
                 <div class="toggle-thumb"></div>
               </div>
