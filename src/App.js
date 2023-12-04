@@ -33,31 +33,23 @@ const PricingDeets = {
 
 function App() {
 
+  const [pageviews, setPageviews] = useState(3);
+  const [isMonthly, setIsMonthly] = useState(true);
 
-    const [pageViews, setPageViews] = useState(50000); // Initial page views value
+  function updateRangePosition(pageviews) {
+    if (pageviews == 1) {
+      return "0%";
+    }
+    if (pageviews == 5) {
+      return "100%";
+    }
+    return `${(pageviews - 1) * 20}%`;
+  }
   
-    const handleSliderChange = (value) => {
-      setPageViews(value);
-    };
-  
-    const calculatePrice = () => {
-      let price;
-  
-      if (pageViews <= 10000) {
-        price = 8;
-      } else if (pageViews <= 50000) {
-        price = 12;
-      } else if (pageViews <= 100000) {
-        price = 16;
-      } else if (pageViews <= 500000) {
-        price = 24;
-      } else {
-        price = 36;
-      }
-  
-      return price;
-    };
-  
+  const handleConfirmClick = () => {
+    
+  };
+
   return (
     <div className="app">
      <div className="wrapper">
@@ -70,9 +62,9 @@ function App() {
             <h2> &{pageViews}k PAGEVIEWS</h2>
             <div class="icon">
               <input className='slider' type="range"
-               min={10000}
-               max={1000000}
-               step={10000}
+               min={}
+               max={}
+               step={}
                value={pageViews}
                onChange={handleSliderChange}
               />
